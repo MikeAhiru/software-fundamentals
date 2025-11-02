@@ -1,0 +1,23 @@
+// Algoritm description:
+// Basic clac v1
+// Get two numbers
+// Add, subs, mult, div
+// Print results
+Algoritmo basic_calc
+	// 1. Define vars and/or const
+	Definir num1, num2, add, subs, mult Como Entero
+	Definir div Como Real
+	// 2. Initialize vars and/or const
+	num1 <- 10;
+	num2 <- 3;
+	// 3. Processes
+	add <- num1+num2
+	subs <- num1-num2
+	mult <- num1*num2
+	div <- num1/num2
+	// 4.Outputs
+	Escribir 'Addition:', add
+	Escribir 'Substraction: ', subs
+	Escribir 'Multiplication: ', mult
+	Escribir 'Division:', div
+FinAlgoritmo
