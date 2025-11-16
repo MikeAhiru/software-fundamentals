@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_2"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 05:37:26 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDU6MDc6MDAgcC7igK9tLjsxMDYzMA=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDU6Mzc6MjYgcC7igK9tLjs1OzEwNzUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <output expression="&quot;Ingrese cualquier n&#250;mero positivo o negativo&quot;" newline="True"/>
+            <input variable="num1"/>
+            <if expression="num1 MOD 2=0">
+                <then>
+                    <output expression="&quot;El valor escrito es un n&#250;mero par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El valor escrito es un n&#250;mero impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
