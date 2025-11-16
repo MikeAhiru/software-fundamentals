@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_5"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 07:24:35 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDU6NTI6NTcgcC7igK9tLjsxMDY0Mg=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDc6MjQ6MzUgcC7igK9tLjsxMjsxMDc5Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DI" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="gender" type="String" array="False" size=""/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="address" type="String" array="False" size=""/>
+            <declare name="phoneNumber" type="Integer" array="False" size=""/>
+            <declare name="salary" type="Integer" array="False" size=""/>
+            <declare name="salaryFinally" type="Integer" array="False" size=""/>
+            <declare name="salaryTotal" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escribe tipo de identificaci&#243;n (CC, PS, CE, CI:)&quot;" newline="True"/>
+            <input variable="DI"/>
+            <output expression="&quot;Escribe nombre:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Escribe apellido&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Escribe tu g&#233;nero (F) o (M):&quot;" newline="True"/>
+            <input variable="gender"/>
+            <output expression="&quot;Escribe tu a&#241;o de nacimiento&quot;" newline="True"/>
+            <input variable="year"/>
+            <output expression="&quot;Escribe tipo direcci&#243;n&quot;" newline="True"/>
+            <input variable="address"/>
+            <output expression="&quot;Escribe tu n&#250;mero telef&#243;nico&quot;" newline="True"/>
+            <input variable="phoneNumber"/>
+            <output expression="&quot;Escribe tu salario&quot;" newline="True"/>
+            <input variable="salary"/>
+            <if expression="salary &gt;= 2000000">
+                <then>
+                    <if expression="gender = &quot;F&quot;">
+                        <then>
+                            <assign variable="salaryFinally" expression="salary*0.03"/>
+                        </then>
+                        <else>
+                            <assign variable="salaryFinally" expression="salary*0.025"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="salary &gt;= 1200000">
+                        <then>
+                            <assign variable="salaryFinally" expression="salary * 0.05"/>
+                        </then>
+                        <else>
+                            <if expression="salary &lt;= 1200000">
+                                <then>
+                                    <if expression="gender = &quot;F&quot;">
+                                        <then>
+                                            <assign variable="salaryFinally" expression="salary*0.10"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="salaryFinally" expression="salary*0.08"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="salaryTotal" expression="salaryFinally + salary"/>
+            <output expression="&quot;El usuario registrado con &quot;&amp; name &amp; lastName &amp; &quot; identificado con  &quot; &amp; DI &amp; &quot; con a&#241;o de nacimiento:&quot; &amp; year &amp; &quot; con direcci&#243;n en: &quot; &amp; address &amp;  &quot; con n&#250;mero de tel&#233;fono: &quot; &amp; phoneNumber &amp; &quot; y con un salario inicial de: &quot; &amp; salary &amp; &quot; su salario final es de: &quot; &amp; salaryTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
