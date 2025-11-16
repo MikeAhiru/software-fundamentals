@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio_1"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 05:11:43 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDQ6MDQ6NDIgcC7igK9tLjsxMDYzMg=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTU7MDU6MTE6NDMgcC7igK9tLjs2OzEwNzQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="random(6)"/>
+            <assign variable="dado2" expression="Random(6)"/>
+            <output expression="&quot;El n&#250;mero del primer dado es: &quot; &amp; dado1" newline="True"/>
+            <output expression="&quot;El n&#250;mero del segundo dado es: &quot; &amp; dado2" newline="True"/>
+            <if expression="dado1 % 2 = 0">
+                <then>
+                    <output expression="&quot;El valor del primer dado es un n&#250;mero par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El valor del primer dado es un n&#250;mero impar&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado2 % 2 = 0">
+                <then>
+                    <output expression="&quot;El valor del segundo dado es un n&#250;mero par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El valor del segundo dado es un n&#250;mero impar&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 = dado2">
+                <then>
+                    <output expression="&quot;Los n&#250;meros de los dados son iguales ---YOU WIN----&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;los n&#250;meros de los dados no son iguales ---GAME OVER----&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
