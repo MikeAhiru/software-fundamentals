@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_2"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 07:36:03 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDY6NDU6MDMgcC7igK9tLjsxMDY0MA=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDc6MzY6MDMgcC7igK9tLjs3OzEwNzU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numVeces" type="Integer" array="False" size=""/>
+            <declare name="sumaTotal" type="Integer" array="False" size=""/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="sumaTotal" expression="0"/>
+            <output expression="&quot;Escribe el n&#250;mero de veces que desea lanzar el dado&quot;" newline="True"/>
+            <input variable="numVeces"/>
+            <for variable="i" start="1" end="numVeces" direction="inc" step="1">
+                <assign variable="dado1" expression="random(6)"/>
+                <output expression="&quot;El valor otorgado No &quot; &amp; i &amp; &quot; es de: &quot; &amp; dado1" newline="True"/>
+                <assign variable="sumaTotal" expression="dado1 + sumaTotal"/>
+            </for>
+            <output expression="&quot;La suma total de los valores generadores es de: &quot; &amp; sumaTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
