@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_1"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 06:22:09 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDY6MTU6NDkgcC7igK9tLjsxMDY0Nw=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDY6MjI6MDkgcC7igK9tLjsxOzEwNzQ5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="random (6)"/>
+            <output expression="&quot;El numero otogado es: &quot; &amp; dado1" newline="True"/>
+            <if expression="dado1 MOD 2 = 0">
+                <then>
+                    <output expression="&quot;El numero es Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El numero es IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
