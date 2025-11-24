@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_4"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 10:23:42 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjA7MDU6MzY6MDAgcC7igK9tLjsxMDYyOA=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjM7MTA6MjM6NDIgcC7igK9tLjsxOTsxMDc5NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="numveces" type="Integer" array="False" size=""/>
+            <assign variable="numveces" expression="0"/>
+            <do expression="(dado1 != 6 or dado2 != 6)">
+                <assign variable="numveces" expression="numveces+1"/>
+                <assign variable="dado1" expression="random(6)"/>
+                <assign variable="dado2" expression="random(6)"/>
+                <output expression="&quot;Lanzamiento No&quot;&amp; numveces" newline="True"/>
+                <output expression="&quot;Resultado dado No 1: &quot; &amp;dado1" newline="True"/>
+                <output expression="&quot;Resultado dado No 2: &quot; &amp;dado2" newline="True"/>
+                <output expression="&quot;----------------------&quot;" newline="True"/>
+                <comment text=""/>
+            </do>
+            <output expression="&quot;Par de seis conseguido&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
