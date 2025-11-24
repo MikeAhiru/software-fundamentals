@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_6"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 09:29:22 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjM7MDg6MDE6MjYgcC7igK9tLjsxMDYzNA=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjM7MDk6Mjk6MjIgcC7igK9tLjs4OzEwNzU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="totalTiros" type="Integer" array="False" size=""/>
+            <declare name="sumaTotal" type="Integer" array="False" size=""/>
+            <declare name="totalPar" type="Integer" array="False" size=""/>
+            <declare name="totalImpar" type="Integer" array="False" size=""/>
+            <declare name="veces" type="String" array="False" size=""/>
+            <assign variable="totalTiros" expression="0"/>
+            <assign variable="sumaTotal" expression="0"/>
+            <assign variable="totalPar" expression="0"/>
+            <assign variable="totalImpar" expression="0"/>
+            <assign variable="veces" expression="&quot;S&quot;"/>
+            <do expression="veces == &quot;S&quot;">
+                <assign variable="totalTiros" expression="totalTiros + 1"/>
+                <assign variable="dado1" expression="random(6)"/>
+                <assign variable="dado2" expression="random(6)"/>
+                <assign variable="sumaTotal" expression="sumaTotal + dado1 + dado2"/>
+                <if expression="(dado1+dado2) % 2 = 0">
+                    <then>
+                        <assign variable="totalPar" expression="totalPar + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="totalImpar" expression="totalImpar + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;Lanzamiento No: &quot;&amp; totalTiros" newline="True"/>
+                <output expression="&quot;Resultado obtenido: &quot;" newline="True"/>
+                <output expression="&quot;Dado No 1: &quot;&amp; dado1" newline="True"/>
+                <output expression="&quot;Dado No 1: &quot;&amp; dado2" newline="True"/>
+                <output expression="&quot;Desea continuar lanzando los dados?(S/N): &quot;" newline="True"/>
+                <input variable="veces"/>
+                <comment text="En Flowgorithm no encontre la forma de cambiar la minuscula a may&#250;scula, por eso se usa solo con may&#250;sculas "/>
+            </do>
+            <output expression="&quot;Total de tiros efectuados: &quot; &amp; totalTiros" newline="True"/>
+            <output expression="&quot;Suma total de los tiros efectuados: &quot; &amp; sumaTotal" newline="True"/>
+            <output expression="&quot;Total de pares generados: &quot; &amp; totalPar" newline="True"/>
+            <output expression="&quot;Total de impares generados: &quot; &amp; totalImpar" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
