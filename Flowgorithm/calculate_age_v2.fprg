@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="calculate_age_v2"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-16 10:21:13 a.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTY7MDk6MTk6NDYgYS7igK9tLjsxMDYzMw=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTY7MTA6MjE6MTMgYS7igK9tLjsxOzEwNzIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="myAge" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="currentYear" type="Integer" array="False" size=""/>
+            <declare name="birthYear" type="Integer" array="False" size=""/>
+            <assign variable="currentYear" expression="2025"/>
+            <output expression="&quot;Enter your year of birth (AAAA): &quot;" newline="True"/>
+            <input variable="birthYear"/>
+            <if expression="birthYear &lt;= currentYear and birthYear &gt;= 1910">
+                <then>
+                    <assign variable="myAge" expression="getAge(birthYear, currentYear)"/>
+                    <output expression="&quot;Your age is: &quot; &amp; myAge" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The year of birth could not be greater than the current year, and it could not be less than 1910&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getAge" type="Integer" variable="age">
+        <parameters>
+            <parameter name="bYear" type="Integer" array="False"/>
+            <parameter name="cYear" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <assign variable="age" expression="bYear - cYear"/>
+        </body>
+    </function>
+</flowgorithm>
