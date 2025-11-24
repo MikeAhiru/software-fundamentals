@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_3"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 10:06:12 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDc6Mzg6MzMgcC7igK9tLjsxMDY0Ng=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjM7MTA6MDY6MTIgcC7igK9tLjs1OzEwNzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="numVeces" type="Integer" array="False" size=""/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="total1" type="Integer" array="False" size=""/>
+            <declare name="total2" type="Integer" array="False" size=""/>
+            <declare name="total3" type="Integer" array="False" size=""/>
+            <declare name="total4" type="Integer" array="False" size=""/>
+            <declare name="total5" type="Integer" array="False" size=""/>
+            <declare name="total6" type="Integer" array="False" size=""/>
+            <assign variable="total1" expression="0"/>
+            <assign variable="total2" expression="0"/>
+            <assign variable="total3" expression="0"/>
+            <assign variable="total4" expression="0"/>
+            <assign variable="total5" expression="0"/>
+            <assign variable="total6" expression="0"/>
+            <output expression="&quot;Escribe el n&#250;mero de veces que desea lanzar el dado&quot;" newline="True"/>
+            <input variable="numVeces"/>
+            <for variable="i" start="1" end="numVeces" direction="inc" step="1">
+                <assign variable="dado1" expression="random(6)"/>
+                <if expression="dado1 = 1">
+                    <then>
+                        <assign variable="total1" expression="total1 + 1"/>
+                    </then>
+                    <else>
+                        <if expression="dado1 = 2">
+                            <then>
+                                <assign variable="total2" expression="total2 + 1"/>
+                            </then>
+                            <else>
+                                <if expression="dado1 = 3">
+                                    <then>
+                                        <assign variable="total3" expression="total3 + 1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="dado1 = 4">
+                                            <then>
+                                                <assign variable="total4" expression="total4 + 1"/>
+                                            </then>
+                                            <else>
+                                                <if expression="dado1 = 5">
+                                                    <then>
+                                                        <assign variable="total5" expression="total5 + 1"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="dado1 = 6">
+                                                            <then>
+                                                                <assign variable="total6" expression="total6 + 1"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;El valor del dado No &quot; &amp; i &amp; &quot; es de: &quot; &amp; dado1" newline="True"/>
+            </for>
+            <output expression="&quot;-----------------------------&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 1 se genero: &quot; &amp; total1 &amp; &quot; veces&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 2 se genero: &quot; &amp; total2 &amp; &quot; veces&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 3 se genero: &quot; &amp; total3 &amp; &quot; veces&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 4 se genero: &quot; &amp; total4 &amp; &quot; veces&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 5 se genero: &quot; &amp; total5 &amp; &quot; veces&quot;" newline="True"/>
+            <output expression="&quot;el n&#250;mero 6 se genero: &quot; &amp; total6 &amp; &quot; veces&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
