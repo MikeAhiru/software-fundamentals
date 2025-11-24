@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenges_1"/>
+        <attribute name="authors" value="maico"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 08:01:17 p.&#8239;m."/>
+        <attribute name="created" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMTk7MDY6MTU6NDkgcC7igK9tLjsxMDY0Nw=="/>
+        <attribute name="edited" value="bWFpY287TUlLRVBDOzIwMjUtMTEtMjM7MDg6MDE6MTcgcC7igK9tLjs0OzEwNzQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="numVeces" type="Integer" array="False" size=""/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="acumPos" type="Integer" array="False" size=""/>
+            <declare name="acumNeg" type="Integer" array="False" size=""/>
+            <assign variable="acumPos" expression="0"/>
+            <assign variable="acumNeg" expression="0"/>
+            <output expression="&quot;Escribe el n&#250;mero de veces que desea lanzar los dados&quot;" newline="True"/>
+            <input variable="numVeces"/>
+            <for variable="i" start="1" end="numVeces" direction="inc" step="1">
+                <assign variable="dado1" expression="random(6)"/>
+                <assign variable="dado2" expression="random(6)"/>
+                <if expression="(dado1+dado2) % 2 = 0">
+                    <then>
+                        <assign variable="acumPos" expression="acumPos + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="acumNeg" expression="acumNeg + 1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Los tiros pares fueron: &quot; &amp; acumPos" newline="True"/>
+            <output expression="&quot;Los tiros Impares fueron: &quot;&amp; acumNeg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
